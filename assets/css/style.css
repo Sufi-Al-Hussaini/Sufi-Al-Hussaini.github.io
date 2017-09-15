@@ -298,13 +298,14 @@ hr {
 /*span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }*/
 
 pre {
-	background-color: #F5F5F5!important;
-	padding-left: 5px;
+	border: 1px solid #eee;
+    border-radius: 3px;
 }
 
 pre code {
 	font-family: Menlo, Monaco, Courier;
-	font-size: 13px;
+	font-size: 13px;    
+	margin: 0px 10px 0 10px
 }
 
 /*table {

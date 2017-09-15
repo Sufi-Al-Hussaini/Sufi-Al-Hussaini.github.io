@@ -9,7 +9,6 @@ highlighter: rouge
 
 gems: [jekyll-paginate]
 paginate: 20
-baseurl: /
 domain_name: 'http://shoaib-ahmed.com'
 google_analytics: 'UA-66607718-1'
 disqus: true

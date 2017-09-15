@@ -34,13 +34,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	text-transform: none;
 	line-height: 1em;
 }
-.icon-facebook:before { content: '\e802'; }
-.icon-facebook-squared:before { content: '\e800'; }
+
 .icon-twitter:before { content: '\e801'; }
-.icon-twitter-1:before { content: '\e804'; }
-.icon-facebook-circled:before { content: '\e805'; }
-.icon-twitter-circled:before { content: '\e806'; }
 .icon-facebook-rect:before { content: '\e803'; }
+.icon-rss:before { content: '\f09e'; }
+.icon-github-circled:before { content: '\f09b'; }
+.icon-mail:before { content: '\e807'; }
+.icon-linkedin-squared:before { content: '\f30c'; }
 
 /* Spacing */
 .post h1, h3, h4, h5, p, .post-body ul, #post-list li, pre {
@@ -645,4 +645,22 @@ h2.month {
 	.post h2.headline { font-size: 13px; }
 	.post h1 { font-size:24px; }
 	.post h2 { font-size:20px; }
+}
+
+.social_links {
+	margin-top: 30px;
+    /*width: 167px;*/
+    margin-left: auto;
+    margin-right: auto;
+    color: #00AAFF;
+    /*border: 1px solid;*/
+    /*border-radius: 4px;*/
+    /*padding: 5px;*/
+}
+
+.social_links li {
+	display: inline;
+    font-size: 3.0rem;
+    font-size: 18px;
+    padding: 10px 10px;
 }

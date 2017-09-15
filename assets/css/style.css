@@ -656,3 +656,10 @@ h2.month {
     font-size: 18px;
     padding: 10px 10px;
 }
+
+code.tag {
+    font-size: 7px;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 10px;
+}

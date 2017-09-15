@@ -29,5 +29,4 @@ I prefer email for professional conversations.
 Phone: +968-97775608 <br/>
 E-mail: sufialhussaini@gmail.com
 
-
 {% include footer.html %}

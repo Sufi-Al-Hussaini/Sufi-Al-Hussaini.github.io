@@ -20,7 +20,7 @@ url:            'http://shoaib-ahmed.com'
 author:         'Shoaib Ahmed'
 authorTwitter:  'sufi-al-hussaini'
 
-permalink:       /:title/
+permalink:       /:year/:title/
 
 defaults:
     -

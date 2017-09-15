@@ -463,11 +463,6 @@ Post List
 
 }
 
-#post-meta div {
-	margin: 0 25px 0 0;
-	float: left;
-}
-
 #sharing {
 	float: right;
 	margin: -2px;
@@ -574,13 +569,12 @@ h2.month {
 }
 
 #post-meta img.avatar {
-  height: 36px;
-  width: 36px;
-  float: left;
-  border-radius: 50%;
-  margin-top: 3px;
-  margin-right: 20px;
-  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
+	height: 36px;
+	width: 36px;
+	float: left;
+	border-radius: 50%;
+	margin: 10px 15px 3px 5px;
+	box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
 }
 
 #post-list.archive.readmore h3{

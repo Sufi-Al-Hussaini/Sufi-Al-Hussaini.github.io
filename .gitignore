@@ -1,5 +1,4 @@
 _site/
-_posts/
 .sass-cache/
 .DS_Store
 Gemfile.lock

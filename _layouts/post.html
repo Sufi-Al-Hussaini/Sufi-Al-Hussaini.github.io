@@ -6,7 +6,7 @@ archive: true
 <article class="post">
     <header>
         <h1>{{ page.title }}</h1>
-        <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }} |
+        <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }} <br/><br/>
         {% if page.tags != '' %}
             <span>
                 {% for tag in page.tags %}

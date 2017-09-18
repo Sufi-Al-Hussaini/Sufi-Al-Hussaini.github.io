@@ -1,10 +1,15 @@
 ---
 layout: post
-title: Play incoming asterisk SIP call on audio device in python (using PJSIP)
+title: Play incoming SIP call on audio device 
+description: Implemented in python using PJSIP library
 date: '2016-10-02 18:59:41'
 tags: asterisk banana-pi
 permalink: play-incoming-asterisk-sip-call-on-audio-device-in-python-using-pjsip/
 ---
+
+## Directing SIP call audio to audio device 
+
+***
 
 Recently, I was asked to implement a sort of public announcement system for a banana pi variant running asterisk.
 

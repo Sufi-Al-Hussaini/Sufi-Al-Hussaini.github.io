@@ -675,3 +675,11 @@ code.tag {
 	color: #fff;
 	font-weight: bold;
 }
+
+#mc_embed_signup{
+	background: #fff; 
+	clear: left; 
+	font: 14px Helvetica,Arial,sans-serif; 
+	width: 100%;
+	margin-top: 15px;
+}

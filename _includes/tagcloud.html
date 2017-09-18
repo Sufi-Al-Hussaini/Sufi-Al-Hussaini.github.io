@@ -4,7 +4,7 @@
   {% endfor %}
 {% endcapture %}
 {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
-<article class="post">
+<article class="post tagcloud">
 	<h1>Tags</h1>
     <h2 class="headline">
     {% if page.tags != '' %}

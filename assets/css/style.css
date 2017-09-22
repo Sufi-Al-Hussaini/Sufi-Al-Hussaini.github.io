@@ -636,21 +636,71 @@ h2.month {
 }
 
 .social_links {
-	margin-top: 30px;
-    /*width: 167px;*/
-    margin-left: auto;
-    margin-right: auto;
+    width: 160px;
     color: #00AAFF;
-    /*border: 1px solid;*/
-    /*border-radius: 4px;*/
-    /*padding: 5px;*/
+   	margin: 20px auto 50px auto;
 }
 
 .social_links li {
-	display: inline;
-    font-size: 3.0rem;
+    display: block;
+    float: left;
+    /*font-size: 3.0rem;*/
     font-size: 18px;
     padding: 10px 10px;
+    width: 35px;
+    height: 35px;
+	margin-right: 5px;
+    border-radius: 8px;
+}
+
+#social_linkedin:before {
+	background: #22E1FF;  /* fallback for old browsers */
+	background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#social_github:before {
+	background: #323232;  /* fallback for old browsers */
+	background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+ 	background-blend-mode: multiply;
+ 	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#social_mail:before {
+	background: #e65245;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #e65245, #e43a15);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #e65245, #e43a15); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-size: 16px!important;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#social_rss:before {
+	background: #ff5858;  /* fallback for old browsers */
+	background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social_links li a {
+    color: #fff;
+}
+
+#site_name {
+	background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: lowercase;
+}
+
+#site_desc {
+	background-color: #CDDCDC;
+	background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+	background-blend-mode: screen, overlay;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 code.tag {
@@ -662,7 +712,6 @@ code.tag {
 
 .tagcloud {
 	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-    /*background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);*/
 	padding: 15px;
 	border-radius: 10px;
 }

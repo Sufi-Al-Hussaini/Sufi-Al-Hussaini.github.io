@@ -308,29 +308,33 @@ pre code {
 	margin: 0px 10px 0 10px
 }
 
-/*table {
-	width: 100%;
+table {
 	margin: 40px 0;
 	border-collapse: collapse;
 	font-size: 13px;
 	line-height: 1.5em;
+	/*border: 1px solid #eaeaea;*/
 }
 
 th,td {
-	text-align: left;
+	text-align: center;
 	padding-right: 20px;
 	vertical-align: top;
 }
 
 table td,td {
-	border-spacing: none;
-	border-style: solid;
+	/*border-spacing: none;*/
+	/*border-style: solid;*/
 	padding: 10px 15px;
-	border-width: 1px 0 0 0;
+	/*border-width: 1px 0 0 0;*/
+}
+
+tr>th {
+	border: 1px solid #eaeaea;
 }
 
 tr>td {
-	border-top: 1px solid #eaeaea;
+	border: 1px solid #eaeaea;
 }
 
 tr:nth-child(odd)>td {
@@ -338,16 +342,16 @@ tr:nth-child(odd)>td {
 }
 
 thead th,th {
-	text-align: left;
+	text-align: center;
 	padding: 10px 15px;
 	height: 20px;
 	font-size: 13px;
 	font-weight: bold;
 	color: #444;
-	border-bottom: 1px solid #dadadc;
+	/*border-bottom: 1px solid #dadadc;*/
 	cursor: default;
 	white-space: nowrap;
-}*/
+}
 
 img {
 	/*width: 100%;*/

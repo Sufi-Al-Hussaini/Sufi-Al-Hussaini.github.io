@@ -1,0 +1,46 @@
+---
+layout: post
+title: IRGen
+description: Arduino-IRremote stripped of its Arduino dependencies
+date: '2017-09-30 20:13:02'
+tags: IR Arduino
+---
+
+
+## `IRGen` is `Arduino-IRremote` stripped of its Arduino dependencies. It runs on a desktop computer and simply generates raw IR codes for supported devices, printing them to `stdout`.
+
+***
+
+### Build
+Build using the provided Makefile:
+```sh
+make all
+```
+
+Or use cmake:
+```sh
+mkdir -p cmake-build-debug
+cd cmake-build-debug
+cmake ..
+make
+```
+
+This should build all demos in the `cmake-build-debug` directory.
+Tested on clang (Mac OSX 10.12.6) and g++ (Ubuntu 16.04).
+
+
+### Usage
+Run the demo executables in the `cmake-build-debug` directory.
+All demos support the `--help` command line switch, which can be used to view supported operations and device dependant usage instructions.
+
+By default all demos print raw code output to `stdout` and exit with `EXIT_SUCCESS` on success. Errors and usage instructions are sent to `stderr` with `EXIT_FAILURE` exit code.
+This guarantees calling programs that `stdout` will always only contain raw code output. This also allows the output to be piped to another program if that is desired.
+
+
+### Use cases
+You might want to use `IRGen` if: 
+
+* You wanted to try `Arduino-IRremote` and didn't have an Arduino.
+* You wanted to run `Arduino-IRremote` on some unsupported hardware.
+* You wanted to generate your raw codes elsewhere (eg. on an IoT cloud/gateway) and send them to your IoT edge devices.
+

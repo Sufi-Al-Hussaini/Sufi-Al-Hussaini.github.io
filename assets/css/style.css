@@ -741,3 +741,12 @@ code.tag {
 	width: 100%;
 	margin-top: 35px;
 }
+
+code.highlighter-rouge {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 2px;
+    font-family: Menlo;
+    font-size: smaller;
+    color: #494e58;
+}

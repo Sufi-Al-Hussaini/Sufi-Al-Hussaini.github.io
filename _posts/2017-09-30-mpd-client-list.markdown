@@ -69,7 +69,6 @@ tags: MPD
 * [indimpc](//web.archive.org/web/20160506123139/http://mpd.wikia.com/wiki/Client:Indimpc "Client:Indimpc") - A minimalistic client with support for indicator-applet, notify-osd and multimedia keys via dbus.
 * [impc](http://www.impc.cz/) - Intelligent Music Player Client - shows related information (articles, images, covers) and learns to search related information from user defined web sources.
 * [gbemol](//web.archive.org/web/20160506123139/http://mpd.wikia.com/wiki/Client:Gbemol "Client:Gbemol") - A GTK+ client with a nice library browser
-
 * [gmpc](http://gmpclient.org/) - Gnome Music Player Client - A fully featured, low on resources player.
 * [guimup](//web.archive.org/web/20160506123139/http://mpd.wikia.com/wiki/Client:Guimup "Client:Guimup") - MPD client written in C++ and GTKMM
 * [Gimmix](//web.archive.org/web/20160506123139/http://mpd.wikia.com/wiki/Client:Gimmix "Client:Gimmix") - A graphical MPD client written in C using GTK+2

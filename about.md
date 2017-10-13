@@ -7,7 +7,7 @@ profile: true
 
 I’m **Shoaib Ahmed** – a software developer who loves programming, poetry & philosophy.
 
-I'm mostly into design & development of software solutions for IOT - ranging from system software for fail-safe high availability cloud servers, to firmware & middleware development for embedded systems, to web and mobile application development.
+I'm mostly into design & development of software solutions for IoT - ranging from system software for fail-safe high availability cloud servers, to firmware & middleware development for embedded systems, to web and mobile application development.
 
 I’m also a decent urdu Sufi poet and self-proclaimed philosopher. I have composed in excess of a dozen [*ghazals*](https://en.wikipedia.org/wiki/Ghazal) and have written a couple of short discourses on metaphysical & epistemological philosophy based on the writings of Al-Ghazel, Rene Descartes & Immanuel Kant. 
 ***Sufi-Al-Hussaini*** is my *nom-de-plume* (pen name).
@@ -15,7 +15,7 @@ I’m also a decent urdu Sufi poet and self-proclaimed philosopher. I have compo
 ***
 
 ### Areas of work
-I've worked extensively with lightweight messaging protocols and frameworks for IOT like [MQTT](mqtt.org/) and [KAA Project](www.kaaproject.org/), POSIX network and system programming, SDK development (in C) & bindings in multiple languages (like Python and Swift), and third party SDK integrations. 
+I've worked extensively with lightweight messaging protocols and frameworks for IoT like [MQTT](mqtt.org/) and [KAA Project](www.kaaproject.org/), POSIX network and system programming, SDK development (in C & C++) and bindings in multiple languages (like Python and Swift), and third party SDK integrations. 
 
 I've also done a fair bit of firmware & middleware development for embedded systems (ARM, AVR, etc.), mobile application development (for iOS) and web development (using Laravel & Django frameworks).
 

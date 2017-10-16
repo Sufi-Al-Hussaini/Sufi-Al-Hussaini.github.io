@@ -305,7 +305,7 @@ pre {
 pre code {
 	font-family: Menlo, Monaco, Courier;
 	font-size: 13px;    
-	margin: 0px 10px 0 10px
+	margin: 0px 10px 0 10px;
 }
 
 table {
@@ -749,4 +749,8 @@ code.highlighter-rouge {
     font-family: Menlo;
     font-size: smaller;
     color: #494e58;
+}
+
+iframe, object, embed {
+    max-width: 100%;
 }

@@ -32,10 +32,31 @@ Tested on clang-900.0.37 (Mac OSX 10.12.6) and gcc-5.4.0 (Ubuntu 16.04.4).
 ### Usage
 Run the demo executables in the `cmake-build-debug` directory.
 All demos support the `--help` command line switch, which can be used to view supported operations and device dependant usage instructions.
+```sh
+$ cd cmake-build-debug/
+$ ./IR-lg-ac-demo --help
+Usage:
+./IR-lg-ac-demo [switch]
+--help
+--op=<0 ~ 2>
+      0 : off
+      1 : temp/flow --temp=<18 ~ 30> --flow=<0 ~ 2>
+      2 : air_swing --swing=<0 or 1>
+      3 : air_clean --clean=<0 or 1>
+--type=<0 or 1> (optional)
+      0 : tower
+      1 : wall (default)
+--heat=<0 or 1> (optional)
+      0 : cool (default)
+      1 : heat
+```
 
 By default all demos print raw code output to `stdout` and exit with `EXIT_SUCCESS` on success. Errors and usage instructions are sent to `stderr` with `EXIT_FAILURE` exit code.
 This guarantees calling programs that `stdout` will always only contain raw code output. This also allows the output to be piped to another program if that is desired.
-
+```sh
+$ ./IR-lg-ac-demo --op=1 --temp=20 --flow=2
++8350 -4250 +550 -1500 +550 -500 +550 -500 +550 -500 +550 -1500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -500 +550 -1500 +550 -500 +550 -1500 +550 -500 +550 -1500 +550 -500 +550 -500 +550 -1500 +550 -500 +550 -500 +550 -1500 +550 -0
+```
 
 ### Use cases
 You might want to use `IRGen` if: 

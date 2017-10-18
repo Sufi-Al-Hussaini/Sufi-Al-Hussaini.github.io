@@ -7,7 +7,7 @@ tags: c++ design-patterns
 ---
 
 
-## The Monitor design pattern is a synchronization construct used in concurrent programming to get mutual exclusion when accessing a shared resource. This post discusses its evolution, use cases and a (slightly modified) C++11 version of its implementation provided by Herb Sutter.
+## The Monitor design pattern is a synchronization construct used in concurrent programming to get mutual exclusion when accessing a shared resource. This post discusses its evolution, use cases and a C++11 based implementation provided by Herb Sutter.
 
 ***
 
@@ -59,7 +59,7 @@ try {
 }
 ```
 
-The same solution can be realized in C using a structure with function pointers and hiding the mutex using a `void*`, although it usually isn't a good idea to do OOP is C.
+The same solution can be realized in C using a structure with function pointers and hiding the mutex using a `void*`, although it usually isn't a good idea to do OOP in C.
 
 But there's still a problem here, the onus of locking and unlocking the mutex is still on the caller. And (*most*) callers are stupid. 
 The solution to this problem is to have the class take over the responsibility of locking/unlocking the mutex. 
@@ -76,7 +76,6 @@ public:
 		// Insert original `do_something()` implementation here
 		m.unlock();
 	}
-}
 };
 ```
 
@@ -136,7 +135,7 @@ public:
 };
 ```
 
-This is a slightly modified version of the solution that Herb proposed as C++11 forbids apllying mutable to references.
+This is a slightly modified version of the solution that Herb proposed as C++11 forbids applying mutable to references.
 
 >[7.1.1 Para 9]:
 >
@@ -177,6 +176,6 @@ int main() {
 ```
 
 
-Most of this post is based on Herb Sutter's brilliant presentation C++ and Beyond 2012: Herb Sutter - C++ Concurrency.
+Most of this post is based on Herb Sutter's brilliant presentation - `C++ and Beyond 2012: Herb Sutter - C++ Concurrency`.
 <iframe src="https://channel9.msdn.com/Shows/Going+Deep/C-and-Beyond-2012-Herb-Sutter-Concurrency-and-Parallelism/player" width="720" height="405" allowFullScreen frameBorder="0"></iframe>
 

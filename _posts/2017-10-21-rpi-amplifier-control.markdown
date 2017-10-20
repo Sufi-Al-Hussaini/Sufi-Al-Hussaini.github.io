@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Raspberry Pi Amplifier control
-description: Switch ON/OFF an amplifier based on audio playback
+title: Raspberry Pi amplifier control
+description: Bash script to switch ON/OFF an amplifier based on audio playback
 date: '2017-10-21 01:20:02'
-tags: Raspberry-Pi 
+tags: Raspberry-Pi MPD
 ---
 
 

@@ -11,14 +11,14 @@ tags: Raspberry-Pi MPD
 
 ***
 
-### How it works?
+## How it works?
 
 The script monitors the status of the sound card, by reading the `/proc/asound/card*/pcm*/sub*/status` file. `state: RUNNING` indicates that the sound card is in use. Based on this, it calls either `amp_on.sh` or `amp_off.sh`. 
 You could decide to defer the amplifier switch OFF by a few seconds after playback stops so that a pause/stop quickly followed by a play doesn't switch off the amplifier.
 
 ***
 
-### Usage
+## Usage
 
 * Set the variables `amplifier_gpio`, `snd_card_file` and `off_timer_time`.
 * Implement the `amp_on.sh` and `amp_off.sh` scripts. 
@@ -84,7 +84,7 @@ done
 
 ***
 
-### Fix MPD holds sound device indefinitely if client goes offline during playback problem
+## Fix MPD holds sound device indefinitely if client goes offline during playback problem
 
 I had this problem where MPD wouldn't release the sound device when a streaming client went offline/out of the network. This left the amplifier turned ON for extended periods of time leading to over-heating problems.
 

@@ -7,8 +7,6 @@ aboutPage: true
 markdown: kramdown
 highlighter: rouge
 
-gems: [jekyll-paginate, jekyll-sitemap]
-paginate: 20
 domain_name: 'http://shoaib-ahmed.com'
 google_analytics: 'UA-66607718-1'
 disqus: true

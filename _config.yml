@@ -6,6 +6,7 @@ aboutPage: true
 
 markdown: kramdown
 highlighter: rouge
+paginate: 100
 
 domain_name: 'http://shoaib-ahmed.com'
 google_analytics: 'UA-66607718-1'
@@ -14,6 +15,7 @@ disqus_shortname: 'shoaib-ahmed-com'
 
 plugins:
     - jekyll-sitemap
+    - jekyll-paginate
 
 # Details for the RSS feed generator
 url:            'http://shoaib-ahmed.com'

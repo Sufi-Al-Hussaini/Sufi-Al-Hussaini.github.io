@@ -1,15 +1,15 @@
 ---
 layout: post
-title: ONVIF / gSOAP in C++ by example
+title: ONVIF / gSOAP in C++ by example [Pt-1]
 description: Retrieving a snapshot from an ONVIF complaint IP Camera
 date: '2016-10-21 20:33:40'
-tags: onvif soap gsoap
+tags: onvif soap gsoap c++
 permalink: onvif-gsoap-in-c-by-example/
 ---
 
 ## Retrieve a snapshot from an ONVIF complaint IP Camera using a client application written in C++. 
 
-If all you need is the code, head [here](#the-example).
+If all you need is the code, head [here](#the-example). To learn more about the ONVIF specification and how exactly gSOAP works, see [ONVIF / gSOAP in C++ by example [Pt-2]]({% post_url 2017-10-27-onvif-gsoap-in-c-by-example-pt-2 %}).
 
 ***
 
@@ -62,7 +62,7 @@ You will need [curl](https://curl.haxx.se/) to build the app.
 
 
 #### Usage
-Clone the example code from github:
+Clone the example code from [github](https://github.com/Sufi-Al-Hussaini/onvif-gsoap-by-example):
 
 ```
 git clone https://github.com/Sufi-Al-Hussaini/onvif-gsoap-by-example
@@ -87,7 +87,7 @@ The base code for this project was adapted from the [gsoap-onvif github repo](ht
 
 ##### References:
 
-<a name="onvif-wikipedia">1. </a>[ Wikipedia: ONVIF](https://en.wikipedia.org/wiki/ONVIF)
-<a name="soap-wikipedia">2. </a>[ Wikipedia: SOAP](https://en.wikipedia.org/wiki/SOAP)
-<a name="gsoap-wikipedia">3. </a>[ Wikipedia: gSOAP](https://en.wikipedia.org/wiki/GSOAP)
-<a name="gsoap-genivia">4. </a>[ Genivia: gSOAP overview](https://www.genivia.com/dev.html#overview)
+<a name="onvif-wikipedia">1. </a>[ Wikipedia: ONVIF](https://en.wikipedia.org/wiki/ONVIF)<br/>
+<a name="soap-wikipedia">2. </a>[ Wikipedia: SOAP](https://en.wikipedia.org/wiki/SOAP)<br/>
+<a name="gsoap-wikipedia">3. </a>[ Wikipedia: gSOAP](https://en.wikipedia.org/wiki/GSOAP)<br/>
+<a name="gsoap-genivia">4. </a>[ Genivia: gSOAP overview](https://www.genivia.com/dev.html#overview)<br/>

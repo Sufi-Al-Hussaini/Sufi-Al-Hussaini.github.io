@@ -753,6 +753,7 @@ code.highlighter-rouge {
     font-family: Menlo;
     font-size: smaller;
     color: #494e58;
+    word-wrap: break-word;
 }
 
 iframe, object, embed {

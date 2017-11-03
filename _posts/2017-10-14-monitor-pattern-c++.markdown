@@ -141,7 +141,7 @@ This is a slightly modified version of the solution that Herb proposed as C++11 
 >
 >"The mutable specifier can be applied only to names of class data members (9.2) and cannot be applied to names declared const or static, and cannot be applied to reference members."
 
-Here, we override the function call operator, to which the caller passes an invokable (functor, lambda, etc.). And this invokable is given mutually exclusive access to the shared resource using the mutex. So now, the caller can decide the granularity of the locking.
+Here, we override the function call operator, to which the caller passes a [FunctionObject](http://en.cppreference.com/w/cpp/concept/FunctionObject). And this `FunctionObject` is given mutually exclusive access to the shared resource using the mutex. So now, the caller can decide the granularity of the locking.
 A more complete implementation `monitor` for C++14 can be found [here](https://gist.github.com/etam/9019865).
 
 Here's how it can be used:

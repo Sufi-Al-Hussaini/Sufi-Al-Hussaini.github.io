@@ -6,7 +6,6 @@ date: '2017-10-28 16:19:23'
 tags: c++ 
 ---
 
-
 ## A collection of functions that allow to convert a string representation of a number to its equivalent C++11 fixed width integer type (eg. uint8_t, int16_t, etc.).
 
 ***

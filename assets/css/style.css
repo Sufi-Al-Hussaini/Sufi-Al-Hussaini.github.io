@@ -747,13 +747,24 @@ code.tag {
 }
 
 code.highlighter-rouge {
-    border: 1px solid #eee;
+	border: 1px solid #eee;
     border-radius: 3px;
     padding: 2px;
+    background: #fff;
+}
+
+.highlighter-rouge {
+	background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    padding: 1px;
     font-family: Menlo;
     font-size: smaller;
     color: #494e58;
     word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.hljs {
+	padding: 0px;
 }
 
 iframe, object, embed {

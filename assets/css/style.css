@@ -720,17 +720,20 @@ code.tag {
 
 .tagcloud {
 	background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-	padding: 15px;
-	border-radius: 10px;
+	padding: 1px;
+}
+
+.tagcloud > div {
+	background: #fff;
+	padding: 10px;
 }
 
 .tagcloud h1 {
-	color: #fff;
+	padding-bottom: 15px;
 }
 
 .tagcloud a {
-	color: #fff;
-	font-weight: bold;
+   	/*font-weight: bold;*/
 }
 
 #mc_embed_signup{

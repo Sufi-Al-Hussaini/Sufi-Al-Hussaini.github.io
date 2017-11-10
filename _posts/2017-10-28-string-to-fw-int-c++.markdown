@@ -31,7 +31,9 @@ So here's my solution based off of [this Stack Overflow answer](https://stackove
 ```c++
 uint8_t stou8(std::string const &str, size_t *idx = 0, int base = 10) {
     auto result = std::stoul(str, idx, base);
-    if (result > std::numeric_limits<uint8_t>::max()) { throw std::out_of_range("stou8"); }
+    if (result > std::numeric_limits<uint8_t>::max()) { 
+        throw std::out_of_range("stou8"); 
+    }
     return static_cast<uint8_t>(result);
 }
 ```
@@ -54,19 +56,25 @@ You could write the other variants like so:
 ```c++
 uint16_t stou16(std::string const &str, size_t *idx = 0, int base = 10) {
     auto result = std::stoul(str, idx, base);
-    if (result > std::numeric_limits<uint16_t>::max()) { throw std::out_of_range("stou16"); }
+    if (result > std::numeric_limits<uint16_t>::max()) { 
+        throw std::out_of_range("stou16"); 
+    }
     return static_cast<uint16_t>(result);
 }
 
 uint32_t stou32(std::string const &str, size_t *idx = 0, int base = 10) {
     auto result = std::stoul(str, idx, base);
-    if (result > std::numeric_limits<uint32_t>::max()) { throw std::out_of_range("stou32"); }
+    if (result > std::numeric_limits<uint32_t>::max()) { 
+        throw std::out_of_range("stou32"); 
+    }
     return static_cast<uint32_t>(result);
 }
 
 uint64_t stou64(std::string const &str, size_t *idx = 0, int base = 10) {
     auto result = std::stoull(str, idx, base);
-    if (result > std::numeric_limits<uint64_t>::max()) { throw std::out_of_range("stou64"); }
+    if (result > std::numeric_limits<uint64_t>::max()) { 
+        throw std::out_of_range("stou64"); 
+    }
     return static_cast<uint64_t>(result);
 }
 
@@ -80,7 +88,9 @@ template<
         typename = typename std::enable_if<std::is_arithmetic<T>::value, T>::type
 > T stou(std::string const &str, size_t *idx, int base) {
     auto result = std::stoul(str, idx, base);
-    if (result > std::numeric_limits<T>::max()) { throw std::out_of_range("stou"); }
+    if (result > std::numeric_limits<T>::max()) { 
+        throw std::out_of_range("stou"); 
+    }
     return static_cast<T>(result);
 }
 ```
@@ -94,13 +104,10 @@ template<
 > T stou(std::string const &str, size_t *idx, int base) {
     auto result = (sizeof(T) > sizeof(unsigned long))
                   ? std::stoull(str, idx, base) : std::stoul(str, idx, base);
-    if (result > std::numeric_limits<T>::max()) { throw std::out_of_range("stou"); }
+    if (result > std::numeric_limits<T>::max()) { 
+        throw std::out_of_range("stou"); 
+    }
     return static_cast<T>(result);
 }
-
-auto stou8 = stou<uint8_t>;
-auto stou16 = stou<uint16_t>;
-auto stou32 = stou<uint32_t>;
-auto stou64 = stou<uint64_t>;
 ```
 

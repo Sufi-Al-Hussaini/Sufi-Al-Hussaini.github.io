@@ -5,16 +5,18 @@
 {% endcapture %}
 {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
 <article class="post tagcloud">
-	<h1>Tags</h1>
-    <h2 class="headline">
-    {% if page.tags != '' %}
-        <span>
-            {% for temptag in sortedtemptags %}
-				{% assign tagitems = temptag | split: '#' %}
-				{% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-				<a href="/tag/{{ tagname }}"><code class="tag"><nobr>{{ tagname }}</nobr></code></a>
-			{% endfor %}
-        </span>
-    {% endif %}
-    </h2>
+    <div>
+    	<h1>Tags</h1>
+        <h2 class="headline">
+        {% if page.tags != '' %}
+            <span>
+                {% for temptag in sortedtemptags %}
+    				{% assign tagitems = temptag | split: '#' %}
+    				{% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+    				<a href="/tag/{{ tagname }}"><code class="tag"><nobr>{{ tagname }}</nobr></code></a>
+    			{% endfor %}
+            </span>
+        {% endif %}
+        </h2>
+    </div>
 </article>

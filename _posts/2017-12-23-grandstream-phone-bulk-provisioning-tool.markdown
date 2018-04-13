@@ -16,6 +16,7 @@ Currently 3 models are supported:
 * GXP2170
 * GXV3240
 
+<br/>
 The script works by using Grandstream's HTTP API, which associates every setting on the web UI with a short-code (eg `P64` for `timezone`).  
 
 #### Note: 

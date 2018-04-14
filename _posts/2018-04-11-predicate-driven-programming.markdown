@@ -210,42 +210,48 @@ int main() {
 But there's a problem here. Waiting on a single response ignores the fact that in the meantime another command or data may be received, for example a `RING` which indicates an incoming call, and it will be lost. <br/>
 Using libdo, this problem can be solved. Below is a program which rejects all incoming calls and responds to other commands as well. New commands can be added easily.
 
-```cpp
+```c
+static char g_cmd[30];
+static bool g_initialized;
+
+static bool read_serial_cmd(Stream *stream, char *buf, const char *delimiter, unsigned int timeout);
+
+/* Predicates */
+bool incoming_call(void *data) {
+    return !strcmp(g_cmd, "RING");
+}
+
+bool ok(void *data) {
+    return !strcmp(g_cmd, "OK");
+}
+
+/* Work functions */
+bool reject_incoming_call(void *data) {
+    Stream *serial = data;
+    serial->write("ATH\r\n");
+    return false; /* Run always */
+}
+
+bool set_initialized(void *data) {
+    g_initialized = true;
+    return true; /* Run once */
+}
+
 int main() {
-	char cmd[30];
 	Stream serial(/* ... */);
 	struct do_doer *serial_doer = do_init();
 
-	struct do_work *reject_incoming = do_work_when(
-        [](void *data) {
-        	Stream *serial = data;
-            serial->write("ATH\r\n");
-            return false; /* Run always */
-        },
-        &serial,
-        [](void *data) {
-            return !strcmp(cmd == "RING");
-        }
-    );
+	struct do_work *reject_incoming = do_work_when(reject_incoming_call, &serial, incoming_call);
     do_so(serial_doer, reject_incoming);
+
 	/* ... */
 
 	serial.write("AT\r\n");
-	struct do_work *check_ok = do_work_when(
-        [](void *data) {
-        	Stream *serial = data;
-            /* ... */
-            return true; /* Run once */
-        },
-        &serial,
-        [](void *data) {
-            return !strcmp(cmd == "OK");
-        }
-    );
-    do_so(serial_doer, check_ok);
+	struct do_work *check_initialized = do_work_when(set_initialized, NULL, ok);
+    do_so_until(serial_doer, check_initialized, time(NULL) + 3); /* Remove the work after 3 seconds */
 
 	while (1) {
-		bool cmd_recv = read_between(&serial, cmd, "\r\n", "\r\n", 3000);
+		bool cmd_recv = read_serial_cmd(&serial, g_cmd, "\r\n", 3000);
 		if (cmd_recv) {
 			do_loop(serial_doer);
 		}
@@ -260,25 +266,42 @@ int main() {
 ##### 2. Deferred processing
 
 In system programming, event driven loops that block on mutexes, signals, etc. could use the respective timed variant syscalls (`pthread_cond_timedwait()`, `pselect()`, etc.) and call the `loop()` method when such a call times out.<br/> 
-So callbacks can be added from within event handlers and serviced when there's nothing much to do. 
+So, callbacks can be added from within event handlers and serviced when there's nothing much to do. 
 
 For example: 
 ```c
+static struct do_doer *g_doer;
+
+bool long_running_job(void *data) {
+    /* ... */
+    return true;
+}
+
+bool not_busy(void *data) {
+    /* ... */
+    return true;
+}
+
 void event_handler() {
 	/* Handle event */
-	call_when(function1, predicate1);	
+    struct do_work *deferred = do_work_when(long_running_job, NULL, not_busy);
+    do_so(g_doer, deferred); 
 }
 
 int main() {
 	/* ... */
+    g_doer = do_init();
+
 	int ret = pthread_cond_timedwait(&condition, &mutex, &ts);
     if (ret == 0) {
         /* ... */
         event_handler();
     }
     else if (ret == ETIMEDOUT) {
-    	loop();
+    	do_loop(g_doer);
     }
+
+    do_destroy(g_doer);
     exit(EXIT_SUCCESS);
 }
 ```

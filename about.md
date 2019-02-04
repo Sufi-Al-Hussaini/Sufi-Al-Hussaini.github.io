@@ -29,9 +29,6 @@ I've made some notable contributions to several open-source projects and I'm act
 ***
 
 ### Contact
-I prefer email for professional conversations.
-
-Phone: +91-6362834114 <br/>
 E-mail: sufialhussaini@gmail.com
 
 {% include footer.html %}
